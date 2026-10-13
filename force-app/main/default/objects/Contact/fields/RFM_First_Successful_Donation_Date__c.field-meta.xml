@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFM_First_Successful_Donation_Date__c</fullName>
+    <description>First Closed Won donation date with Amount greater than zero used by Contact-level RFM. Kept separate from NPSP first close date rollups.</description>
+    <externalId>false</externalId>
+    <label>RFM First Successful Donation Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

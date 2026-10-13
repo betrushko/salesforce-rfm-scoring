@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFM_Qualification_Status__c</fullName>
+    <description>Reason a Contact is qualified or not qualified for Contact-level RFM scoring.</description>
+    <externalId>false</externalId>
+    <label>RFM Qualification Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Qualified</fullName><default>false</default><label>Qualified</label></value>
+            <value><fullName>No Successful Donations</fullName><default>false</default><label>No Successful Donations</label></value>
+            <value><fullName>Missing Contact Link</fullName><default>false</default><label>Missing Contact Link</label></value>
+            <value><fullName>Missing Donation Amount</fullName><default>false</default><label>Missing Donation Amount</label></value>
+            <value><fullName>Missing Close Date</fullName><default>false</default><label>Missing Close Date</label></value>
+            <value><fullName>Data Quality Issue</fullName><default>false</default><label>Data Quality Issue</label></value>
+            <value><fullName>Excluded</fullName><default>false</default><label>Excluded</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

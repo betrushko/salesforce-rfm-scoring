@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Payments_12M__c</fullName>
+    <description>Expected number of payments in the active observation window, capped at 12 months, based on NPSP installment period and establishment date.</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+    TEXT(npe03__Installment_Period__c),
+    &quot;Monthly&quot;,
+        IF(
+            ISBLANK(npe03__Date_Established__c),
+            12,
+            MIN(12, MAX(1, CEILING((TODAY() - npe03__Date_Established__c + 1) / 30)))
+        ),
+    &quot;Quarterly&quot;,
+        IF(
+            ISBLANK(npe03__Date_Established__c),
+            4,
+            MIN(4, MAX(1, CEILING((TODAY() - npe03__Date_Established__c + 1) / 90)))
+        ),
+    &quot;Annual&quot;, 1,
+    &quot;Yearly&quot;, 1,
+    0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs>
+    <label>Expected Payments 12M</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+</CustomField>

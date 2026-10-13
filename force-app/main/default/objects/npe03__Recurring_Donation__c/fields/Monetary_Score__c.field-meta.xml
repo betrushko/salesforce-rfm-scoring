@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monetary_Score__c</fullName>
+    <description>M score based on monetary percentile. 5 is top percentile band and 1 is lowest.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        ISBLANK(Lifetime_Paid_Amount__c),
+        Lifetime_Paid_Amount__c &lt;= 0
+    ),
+    0,
+    IF(
+        ISBLANK(Monetary_Percentile__c),
+        NULL,
+        IF(
+            Monetary_Percentile__c &gt;= 80,
+            5,
+            IF(
+                Monetary_Percentile__c &gt;= 60,
+                4,
+                IF(
+                    Monetary_Percentile__c &gt;= 40,
+                    3,
+                    IF(Monetary_Percentile__c &gt;= 20, 2, 1)
+                )
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs>
+    <label>Monetary Score</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+</CustomField>

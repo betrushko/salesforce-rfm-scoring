@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Rate__c</fullName>
+    <description>Successful payments in the trailing 12 months divided by expected payments in the same window.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        ISBLANK(Successful_Payments_12M__c),
+        Expected_Payments_12M__c = 0
+    ),
+    NULL,
+    Successful_Payments_12M__c / Expected_Payments_12M__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs>
+    <label>Payment Rate</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

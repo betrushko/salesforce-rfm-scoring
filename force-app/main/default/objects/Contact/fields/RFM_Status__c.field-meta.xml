@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFM_Status__c</fullName>
+    <description>Executive Contact-level RFM segment. Strong is intentionally not used in the Contact-level model.</description>
+    <externalId>false</externalId>
+    <label>RFM Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Elite</fullName><default>false</default><label>Elite</label></value>
+            <value><fullName>Stable</fullName><default>false</default><label>Stable</label></value>
+            <value><fullName>At Risk</fullName><default>false</default><label>At Risk</label></value>
+            <value><fullName>Critical</fullName><default>false</default><label>Critical</label></value>
+            <value><fullName>Unqualified</fullName><default>false</default><label>Unqualified</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFM_Expected_Payments_12M__c</fullName>
+    <description>Sum of expected recurring donation payments in the trailing 12 months for Contact-level RFM.</description>
+    <externalId>false</externalId>
+    <label>RFM Expected Payments 12M</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+</CustomField>

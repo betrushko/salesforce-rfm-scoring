@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFM_Recency_Score__c</fullName>
+    <description>Contact-level RFM recency score. Recurring and mixed donors use monthly bins; one-time donors use annual/semiannual bins.</description>
+    <externalId>false</externalId>
+    <label>RFM Recency Score</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+</CustomField>

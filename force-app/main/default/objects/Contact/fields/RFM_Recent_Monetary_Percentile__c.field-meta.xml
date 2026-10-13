@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFM_Recent_Monetary_Percentile__c</fullName>
+    <description>Percent-rank of Contact RFM paid amount in the trailing 12 months.</description>
+    <externalId>false</externalId>
+    <label>RFM Recent Monetary Percentile</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+</CustomField>
